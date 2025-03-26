@@ -34,6 +34,9 @@ android {
 
 dependencies {
 
+    implementation(projects.core.domain)
+    implementation(projects.run.domain)
+
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.ui.graphics)
