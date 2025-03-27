@@ -1,4 +1,4 @@
-package me.shwetagoyal.core.presentation.designsystem
+package me.shwetagoyal.presentation.designsystem
 
 import org.junit.Test
 

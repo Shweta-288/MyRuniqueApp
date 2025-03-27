@@ -6,6 +6,7 @@ import org.gradle.kotlin.dsl.project
 
 
 fun DependencyHandlerScope.addUiLayerDependencies(project: Project) {
+
     "implementation"(project(":core:presentation:ui"))
     "implementation"(project(":core:presentation:designsystem"))
 

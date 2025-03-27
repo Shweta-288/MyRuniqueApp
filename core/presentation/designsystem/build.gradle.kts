@@ -3,8 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "me.shwetagoyal.core.presentation.designsystem"
-
+    namespace = "me.shwetagoyal.presentation.designsystem"
 }
 
 dependencies {

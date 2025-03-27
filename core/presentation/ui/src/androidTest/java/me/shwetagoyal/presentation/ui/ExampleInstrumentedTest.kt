@@ -1,4 +1,4 @@
-package me.shwetagoyal.core.presentation.ui
+package me.shwetagoyal.presentation.ui
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("me.shwetagoyal.core.presentation.ui.test", appContext.packageName)
+        assertEquals("me.shwetagoyal.presentation.ui.test", appContext.packageName)
     }
 }

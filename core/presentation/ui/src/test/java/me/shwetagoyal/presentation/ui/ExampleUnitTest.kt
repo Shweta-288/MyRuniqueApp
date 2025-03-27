@@ -1,4 +1,4 @@
-package me.shwetagoyal.core.presentation.ui
+package me.shwetagoyal.presentation.ui
 
 import org.junit.Test
 
