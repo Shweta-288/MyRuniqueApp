@@ -1,8 +1,9 @@
-package me.shwetagoyal.presentation.ui
+package me.shwetagoyal.core.presentation.ui
 
 import me.shwetagoyal.core.domain.util.DataError
+import me.shwetagoyal.presentation.ui.R
 
-fun DataError.asUiText(): UiText{
+fun DataError.asUiText(): UiText {
     return when(this){
         DataError.Local.DISK_FULL -> UiText.StringResource(
             R.string.error_disk_full

@@ -1,4 +1,4 @@
-package me.shwetagoyal.presentation.ui
+package me.shwetagoyal.core.presentation.ui
 
 import android.content.Context
 import androidx.annotation.StringRes

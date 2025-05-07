@@ -1,6 +1,6 @@
 package me.shwetagoyal.core.domain.util
 
-sealed interface DataError {
+sealed interface DataError: Error {
     enum class Network: DataError{
         REQUEST_TIMEOUT,
         UNAUTHORIZED,
