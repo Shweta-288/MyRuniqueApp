@@ -26,12 +26,12 @@ import me.shwetagoyal.core.presentation.designsystem.components.RuniqueOutlinedA
 
 @Composable
 fun IntroScreenRoot(
-   onSingInClick: () -> Unit,
-   onSignUpClick: () -> Unit,
+    onSignInClick: () -> Unit,
+    onSignUpClick: () -> Unit,
 ) {
     IntroScreen { action ->
         when(action){
-            IntroAction.OnSingInClick -> onSingInClick()
+            IntroAction.OnSingInClick -> onSignInClick()
             IntroAction.OnSignUpClick -> onSignUpClick()
         }
     }
