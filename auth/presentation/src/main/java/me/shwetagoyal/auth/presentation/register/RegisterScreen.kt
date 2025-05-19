@@ -34,12 +34,12 @@ import androidx.compose.ui.unit.sp
 import me.shwetagoyal.auth.domain.PasswordValidationState
 import me.shwetagoyal.auth.domain.UserDataValidator
 import me.shwetagoyal.auth.presentation.R
+import me.shwetagoyal.auth.presentation.login.LoginAction
 import me.shwetagoyal.core.presentation.designsystem.CheckIcon
 import me.shwetagoyal.core.presentation.designsystem.CrossIcon
 import me.shwetagoyal.core.presentation.designsystem.EmailIcon
 import me.shwetagoyal.core.presentation.designsystem.Poppins
 import me.shwetagoyal.core.presentation.designsystem.RuniqueDarkRed
-import me.shwetagoyal.core.presentation.designsystem.RuniqueGray
 import me.shwetagoyal.core.presentation.designsystem.RuniqueGreen
 import me.shwetagoyal.core.presentation.designsystem.RuniqueTheme
 import me.shwetagoyal.core.presentation.designsystem.components.GradientBackground
@@ -80,7 +80,13 @@ fun RegisterScreenRoot(
     }
     RegisterScreen(
         state = viewModel.state,
-        onAction = viewModel::onAction
+        onAction = { action ->
+            when(action) {
+                is RegisterAction.OnLoginClick -> onSignInClick()
+                else -> Unit
+            }
+            viewModel.onAction(action)
+        }
     )
 }
 
@@ -106,7 +112,7 @@ private fun RegisterScreen(
                 withStyle(
                     style = SpanStyle(
                         fontFamily = Poppins,
-                        color = RuniqueGray
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 ) {
                     append(stringResource(id = R.string.already_have_an_account) + " ")
